@@ -55,6 +55,7 @@ Route::group([
         Route::resource('services', App\Http\Controllers\Admin\ServiceController::class);
         Route::get('metatags', [App\Http\Controllers\Admin\MetaTagController::class, 'index'])->name('metatags.index');
         Route::get('metatags/{metatag}/edit', [App\Http\Controllers\Admin\MetaTagController::class, 'edit'])->name('metatags.edit');
+        Route::put('metatags/{metatag}', [App\Http\Controllers\Admin\MetaTagController::class, 'update'])->name('metatags.update');
         Route::resource('admins', App\Http\Controllers\Admin\AdminController::class);
     });
 });

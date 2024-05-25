@@ -19,36 +19,36 @@ class MetaTagSeeder extends Seeder
                 'id' => 1,
                 'page' => 'Home',
                 'title' => 'Georgia Construction | Home',
-                'description' => '',
-                'keywords' => ''
+                'description' => null,
+                'keywords' => null
             ),
             array(
                 'id' => 2,
                 'page' => 'About',
                 'title' => 'Georgia Construction | About',
-                'description' => '',
-                'keywords' => ''
+                'description' => null,
+                'keywords' => null
             ),
             array(
                 'id' => 3,
                 'page' => 'Projects',
                 'title' => 'Georgia Construction | Projects',
-                'description' => '',
-                'keywords' => ''
+                'description' => null,
+                'keywords' => null
             ),
             array(
                 'id' => 4,
                 'page' => 'Services',
                 'title' => 'Georgia Construction | Services',
-                'description' => '',
-                'keywords' => ''
+                'description' => null,
+                'keywords' => null
             ),
             array(
                 'id' => 5,
                 'page' => 'Contact',
                 'title' => 'Georgia Construction | Contact',
-                'description' => '',
-                'keywords' => ''
+                'description' => null,
+                'keywords' => null
             )
         );
 

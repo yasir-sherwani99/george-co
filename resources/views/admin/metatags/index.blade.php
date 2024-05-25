@@ -21,7 +21,7 @@
                                     <th>#</th>
                                     <th>Page</th>
                                     <th>Title</th>
-                                    <th>Tags</th>
+                                    <th>Keywords</th>
                                     <th class="text-end">Action</th>
                                 </tr>
                             </thead>
@@ -37,7 +37,16 @@
                                                 {{ $meta->title }}
                                             </td>
                                             <td>
-                                                <span class="badge bg-soft-primary">test</span>
+                                                @if(isset($meta->keywords))    
+                                                    <?php
+                                                        $keywords = explode(",", $meta->keywords);
+                                                    ?>
+                                                    @if(count($keywords) > 0)
+                                                        @foreach($keywords as $keyword)
+                                                            <span class="badge bg-soft-primary">{{ $keyword }}</span>
+                                                        @endforeach
+                                                    @endif
+                                                @endif
                                             </td>
                                             <td class="text-end">                                                       
                                                 <a href="{{ route('metatags.edit', $meta->id) }}">

@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="category_id">Category <span class="text-danger">*</span></label>                                            
                                     <select 

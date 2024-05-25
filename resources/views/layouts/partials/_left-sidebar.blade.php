@@ -5,10 +5,6 @@
             <span>
                 <img src="{{ asset('admin-assets/images/logos/logoo.svg') }}" alt="Georgia construction co." class="logo-sm">
             </span>
-            <!-- <span>
-                <img src="{{ asset('admin-assets/images/logo.png') }}" alt="logo-large" class="logo-lg logo-light">
-                <img src="{{ asset('admin-assets/images/logo-dark.png') }}" alt="logo-large" class="logo-lg logo-dark">
-            </span> -->
         </a>
     </div>
     <!--end logo-->
@@ -17,27 +13,38 @@
             <div class="collapse navbar-collapse" id="sidebarCollapse">
                 <!-- Navigation -->
                 <ul class="navbar-nav">
-                    <li class="menu-label mt-0">M<span>ain</span></li>
+                    <li class="menu-label mt-0">H<span>ome</span></li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('admin.dashboard') }}"><i class="ti ti-home menu-icon"></i><span>Dashboard</span></a>
+                        <a 
+                            class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" 
+                            href="{{ route('admin.dashboard') }}"
+                        >
+                            <i class="ti ti-home menu-icon"></i>
+                            <span>Dashboard</span>
+                        </a>
                     </li><!--end nav-item-->
                     <li class="menu-label mt-0">A<span>pp Section</span></li>
                     <li class="nav-item">
                         <a 
-                            class="nav-link" 
+                            class="nav-link {{ request()->routeIs('categories.edit') ? 'active' : '' }}" 
                             href="#sidebarCategories" 
                             data-bs-toggle="collapse" 
                             role="button"
                             aria-expanded="false" 
                             aria-controls="sidebarCategories"
                         >
-                            <i class="ti ti-file-diff menu-icon"></i>
+                            <i class="ti ti-layout-grid menu-icon"></i>
                             <span>Categories</span>
                         </a>
-                        <div class="collapse" id="sidebarCategories">
+                        <div class="collapse  {{ request()->routeIs('categories.edit') ? 'show' : '' }}" id="sidebarCategories">
                             <ul class="nav flex-column">
                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('categories.index') }}">Categories List</a>
+                                    <a 
+                                        class="nav-link {{ request()->routeIs('categories.index') || request()->routeIs('categories.edit') ? 'active' : '' }}" 
+                                        href="{{ route('categories.index') }}"
+                                    >
+                                        Categories List
+                                    </a>
                                 </li><!--end nav-item-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('categories.create') }}">New Category</a>
@@ -47,20 +54,25 @@
                     </li><!--end nav-item-->
                     <li class="nav-item">
                         <a 
-                            class="nav-link" 
+                            class="nav-link {{ request()->routeIs('projects.edit') ? 'active' : '' }}" 
                             href="#sidebarProjects" 
                             data-bs-toggle="collapse" 
                             role="button"
                             aria-expanded="false" 
                             aria-controls="sidebarProjects"
                         >
-                            <i class="ti ti-file-diff menu-icon"></i>
+                            <i class="ti ti-backhoe menu-icon"></i>
                             <span>Projects</span>
                         </a>
-                        <div class="collapse" id="sidebarProjects">
+                        <div class="collapse {{ request()->routeIs('projects.edit') ? 'show' : '' }}" id="sidebarProjects">
                             <ul class="nav flex-column">
                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('projects.index') }}">Projects List</a>
+                                    <a 
+                                        class="nav-link {{ request()->routeIs('projects.index') || request()->routeIs('projects.edit') ? 'active' : '' }}" 
+                                        href="{{ route('projects.index') }}"
+                                    >
+                                        Projects List
+                                    </a>
                                 </li><!--end nav-item-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('projects.create') }}">New Project</a>
@@ -70,20 +82,25 @@
                     </li><!--end nav-item-->
                     <li class="nav-item">
                         <a 
-                            class="nav-link" 
+                            class="nav-link {{ request()->routeIs('services.edit') ? 'active' : '' }}" 
                             href="#sidebarServices" 
                             data-bs-toggle="collapse" 
                             role="button"
                             aria-expanded="false" 
                             aria-controls="sidebarServices"
                         >
-                            <i class="ti ti-file-diff menu-icon"></i>
+                            <i class="ti ti-settings-automation menu-icon"></i>
                             <span>Services</span>
                         </a>
-                        <div class="collapse" id="sidebarServices">
+                        <div class="collapse {{ request()->routeIs('services.edit') ? 'show' : '' }}" id="sidebarServices">
                             <ul class="nav flex-column">
                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('services.index') }}">Services List</a>
+                                    <a 
+                                        class="nav-link {{ request()->routeIs('services.edit') ? 'active' : '' }}" 
+                                        href="{{ route('services.index') }}"
+                                    >
+                                        Services List
+                                    </a>
                                 </li><!--end nav-item-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('services.create') }}">New Service</a>
@@ -91,46 +108,56 @@
                             </ul><!--end nav-->
                         </div><!--end sidebarPages-->
                     </li><!--end nav-item-->
-                    <li class="nav-item">
-                        <a 
-                            class="nav-link" 
-                            href="#sidebarAdmins" 
-                            data-bs-toggle="collapse" 
-                            role="button"
-                            aria-expanded="false" 
-                            aria-controls="sidebarAdmins"
-                        >
-                            <i class="ti ti-file-diff menu-icon"></i>
-                            <span>Admins</span>
-                        </a>
-                        <div class="collapse" id="sidebarAdmins">
-                            <ul class="nav flex-column">
-                               <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admins.index') }}">Admins List</a>
-                                </li><!--end nav-item-->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admins.create') }}">New Admin</a>
-                                </li><!--end nav-item-->
-                            </ul><!--end nav-->
-                        </div><!--end sidebarPages-->
-                    </li><!--end nav-item-->
                     <li class="menu-label mt-0">S<span>ettings Section</span></li>
                     <li class="nav-item">
                         <a 
-                            class="nav-link" 
+                            class="nav-link {{ request()->routeIs('metatags.edit') ? 'active' : '' }}" 
                             href="#sidebarMetaTag" 
                             data-bs-toggle="collapse" 
                             role="button"
                             aria-expanded="false" 
                             aria-controls="sidebarMetaTag"
                         >
-                            <i class="ti ti-file-diff menu-icon"></i>
+                            <i class="ti ti-search menu-icon"></i>
                             <span>Meta Tags</span>
                         </a>
-                        <div class="collapse" id="sidebarMetaTag">
+                        <div class="collapse {{ request()->routeIs('metatags.edit') ? 'show' : '' }}" id="sidebarMetaTag">
                             <ul class="nav flex-column">
                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('metatags.index') }}">Meta Tags List</a>
+                                    <a 
+                                        class="nav-link {{ request()->routeIs('metatags.edit') ? 'active' : '' }}" 
+                                        href="{{ route('metatags.index') }}"
+                                    >
+                                        Meta Tags List
+                                    </a>
+                                </li><!--end nav-item-->
+                            </ul><!--end nav-->
+                        </div><!--end sidebarPages-->
+                    </li><!--end nav-item-->
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link {{ request()->routeIs('admins.edit') ? 'active' : '' }}" 
+                            href="#sidebarAdmins" 
+                            data-bs-toggle="collapse" 
+                            role="button"
+                            aria-expanded="false" 
+                            aria-controls="sidebarAdmins"
+                        >
+                            <i class="ti ti-user menu-icon"></i>
+                            <span>Admins</span>
+                        </a>
+                        <div class="collapse {{ request()->routeIs('admins.edit') ? 'show' : '' }}" id="sidebarAdmins">
+                            <ul class="nav flex-column">
+                               <li class="nav-item">
+                                    <a 
+                                        class="nav-link {{ request()->routeIs('admins.edit') ? 'active' : '' }}" 
+                                        href="{{ route('admins.index') }}"
+                                    >
+                                        Admins List
+                                    </a>
+                                </li><!--end nav-item-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admins.create') }}">New Admin</a>
                                 </li><!--end nav-item-->
                             </ul><!--end nav-->
                         </div><!--end sidebarPages-->
@@ -144,7 +171,7 @@
                                 document.getElementById('admin-logout-form-side').submit();
                             "
                         >
-                            <i class="ti ti-shield-lock menu-icon"></i>
+                            <i class="ti ti-logout menu-icon"></i>
                             <span>Logout</span>
                         </a>
                     </li><!--end nav-item-->

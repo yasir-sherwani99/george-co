@@ -20,4 +20,14 @@ class MetaTag extends Model
         'description',
         'keywords'
     ];
+
+    /*
+    |---------------------------------------------------------------
+    | Scopes
+    |---------------------------------------------------------------
+    */
+    public function scopePage($query, $value)
+    {
+        return $query->where('page', $value);
+    }
 }

@@ -64,9 +64,11 @@
                                                     <a href="{{ route('admins.edit', $admin->id) }}">
                                                         <i class="las la-pen text-secondary font-16"></i>
                                                     </a>
-                                                    <button type="submit" class="border-0 bg-transparent">
-                                                        <i class="las la-trash-alt text-secondary font-16"></i>
-                                                    </button>
+                                                    @if($admin->is_super_admin == 0)
+                                                        <button type="submit" class="border-0 bg-transparent">
+                                                            <i class="las la-trash-alt text-secondary font-16"></i>
+                                                        </button>
+                                                    @endif
                                                 </form>
                                             </td>
                                         </tr><!--end tr-->                          

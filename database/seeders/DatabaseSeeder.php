@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             ServiceSeeder::class,
             ServiceImageSeeder::class,
+            ProjectSeeder::class,
+            ProjectImageSeeder::class,
+            MetaTagSeeder::class,
         ]);
     }
 }

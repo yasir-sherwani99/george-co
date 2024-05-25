@@ -22,6 +22,7 @@ class AdminSeeder extends Seeder
                 'email' => 'yasir.sherwani@gmail.com',
                 'password' => Hash::make('123456'),
                 'photo' => null,
+                'is_super_admin' => 1,
                 'status' => 'active'
             ),
             array(
@@ -30,6 +31,7 @@ class AdminSeeder extends Seeder
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make('123456'),
                 'photo' => null,
+                'is_super_admin' => 1,
                 'status' => 'active'
             ),
         );
@@ -43,6 +45,7 @@ class AdminSeeder extends Seeder
                     'name' => $admin['name'],
                     'password' => $admin['password'],
                     'photo' => $admin['photo'],
+                    'is_super_admin' => $admin['is_super_admin'],
                     'status' => $admin['status']
                 ]);
             }

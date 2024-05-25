@@ -4,14 +4,48 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Artesaos\SEOTools\Facades\JsonLd;
+// OR with multi
+use Artesaos\SEOTools\Facades\JsonLdMulti;
+
+// OR
+use Artesaos\SEOTools\Facades\SEOTools;
+
+
 use App\Models\Service;
 use App\Models\Category;
 use App\Models\Project;
+use App\Models\MetaTag;
 
 class PageController extends Controller
 {
     public function aboutIndex()
     {
+        // get home page meta tags data
+        $meta = MetaTag::page('About')->first();
+
+        SEOMeta::setTitle($meta->title);
+        SEOMeta::setDescription($meta->description);
+        SEOMeta::setCanonical('https://georgia.com.pk');
+        SEOMeta::addKeyword($meta->keywords);
+
+        OpenGraph::setDescription($meta->description);
+        OpenGraph::setTitle($meta->title);
+        OpenGraph::setUrl('https://georgia.com.pk');
+        OpenGraph::addProperty('type', 'company');
+        OpenGraph::addProperty('locale', 'en-US');
+
+        TwitterCard::setTitle($meta->title);
+    //    TwitterCard::setSite('@LuizVinicius73');
+
+        JsonLd::setTitle($meta->title);
+        JsonLd::setDescription($meta->description);
+        JsonLd::setType('Company');
+        JsonLd::addImage('https://georgia.com.pk/admin-assets/images/logos/logoo.svg');
+
         $pagePath = 'about';
         view()->share('pagePath', $pagePath);
 
@@ -20,6 +54,28 @@ class PageController extends Controller
 
     public function projectsIndex()
     {
+        // get home page meta tags data
+        $meta = MetaTag::page('Projects')->first();
+
+        SEOMeta::setTitle($meta->title);
+        SEOMeta::setDescription($meta->description);
+        SEOMeta::setCanonical('https://georgia.com.pk');
+        SEOMeta::addKeyword($meta->keywords);
+
+        OpenGraph::setDescription($meta->description);
+        OpenGraph::setTitle($meta->title);
+        OpenGraph::setUrl('https://georgia.com.pk');
+        OpenGraph::addProperty('type', 'company');
+        OpenGraph::addProperty('locale', 'en-US');
+
+        TwitterCard::setTitle($meta->title);
+    //    TwitterCard::setSite('@LuizVinicius73');
+
+        JsonLd::setTitle($meta->title);
+        JsonLd::setDescription($meta->description);
+        JsonLd::setType('Company');
+        JsonLd::addImage('https://georgia.com.pk/admin-assets/images/logos/logoo.svg');
+
         // get all categories
         $categories = Category::active()->get();
         // get all projects
@@ -33,6 +89,28 @@ class PageController extends Controller
 
     public function servicesIndex()
     {
+        // get home page meta tags data
+        $meta = MetaTag::page('Services')->first();
+
+        SEOMeta::setTitle($meta->title);
+        SEOMeta::setDescription($meta->description);
+        SEOMeta::setCanonical('https://georgia.com.pk');
+        SEOMeta::addKeyword($meta->keywords);
+
+        OpenGraph::setDescription($meta->description);
+        OpenGraph::setTitle($meta->title);
+        OpenGraph::setUrl('https://georgia.com.pk');
+        OpenGraph::addProperty('type', 'company');
+        OpenGraph::addProperty('locale', 'en-US');
+
+        TwitterCard::setTitle($meta->title);
+    //    TwitterCard::setSite('@LuizVinicius73');
+
+        JsonLd::setTitle($meta->title);
+        JsonLd::setDescription($meta->description);
+        JsonLd::setType('Company');
+        JsonLd::addImage('https://georgia.com.pk/admin-assets/images/logos/logoo.svg');
+
         // get all services
         $services = Service::active()->get();
 
@@ -44,6 +122,28 @@ class PageController extends Controller
 
     public function contactIndex()
     {
+        // get home page meta tags data
+        $meta = MetaTag::page('Contact')->first();
+
+        SEOMeta::setTitle($meta->title);
+        SEOMeta::setDescription($meta->description);
+        SEOMeta::setCanonical('https://georgia.com.pk');
+        SEOMeta::addKeyword($meta->keywords);
+
+        OpenGraph::setDescription($meta->description);
+        OpenGraph::setTitle($meta->title);
+        OpenGraph::setUrl('https://georgia.com.pk');
+        OpenGraph::addProperty('type', 'company');
+        OpenGraph::addProperty('locale', 'en-US');
+
+        TwitterCard::setTitle($meta->title);
+    //    TwitterCard::setSite('@LuizVinicius73');
+
+        JsonLd::setTitle($meta->title);
+        JsonLd::setDescription($meta->description);
+        JsonLd::setType('Company');
+        JsonLd::addImage('https://georgia.com.pk/admin-assets/images/logos/logoo.svg');
+
         $pagePath = 'contact';
         view()->share('pagePath', $pagePath);
 

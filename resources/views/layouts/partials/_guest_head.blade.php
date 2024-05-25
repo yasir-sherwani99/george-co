@@ -5,6 +5,10 @@
     <meta content="Georgia Construction Company" name="description" />
     <meta content="" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
     <!-- App Favicon -->
     <link rel="shortcut icon" href="{{ Vite::asset('resources/theme/images/favicons/Dark.png') }}">
 

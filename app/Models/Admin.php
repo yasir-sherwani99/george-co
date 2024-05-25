@@ -23,6 +23,7 @@ class Admin extends Authenticatable
         'photo',
         'phone',
         'address',
+        'is_super_admin',
         'status'
     ];
 
@@ -47,5 +48,15 @@ class Admin extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /*
+    |---------------------------------------------------------------
+    | Scopes
+    |---------------------------------------------------------------
+    */
+    public function scopeSuper($query)
+    {
+        return $query->where('is_super_admin', 1);
     }
 }
