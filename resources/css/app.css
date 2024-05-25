@@ -1,0 +1,12 @@
+/* Importing Bootstrap CSS */
+@import url('../theme/css/bootstrap.min.css');
+/* Importing Swiper Slider CSS */
+@import url('../theme/css/swiper.css');
+/* Importing Magnific Popup CSS */
+@import url('../theme/css/magnific-popup.css');
+/* Importing Fontawesome CSS */
+@import url('../theme/fontawesome/css/all.min.css');
+/* Import Animate CSS */
+@import url('../theme/css/animate.css');
+/* Importing Custom Style CSS */
+@import url('../theme/css/style.css');
