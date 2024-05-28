@@ -1,9 +1,9 @@
 <section class="content-sec text-center">
     <div class="shape-1">
-        <img src="images/shapes/1.png" alt="" />
+        <img src="{{ asset('images/shapes/1.png') }}" alt="Georgia Construction" />
     </div>
     <div class="shape-2">
-        <img src="images/shapes/2.png" alt="" />
+        <img src="{{ asset('images/shapes/2.png') }}" alt="Georgia Construction" />
     </div>
     <div class="container wow fadeInUp">
         <h1 class="font-36 font-weight-bold mb-2 mb-md-4">Concept to Creation</h1>

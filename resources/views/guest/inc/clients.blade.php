@@ -12,32 +12,32 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="#" class="client-item">
-                                <img src="images/clients/c-1.svg" alt="" />
+                                <img src="{{ asset('images/clients/c-1.svg') }}" alt="Georgia Construction" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="client-item">
-                                <img src="images/clients/c-2.svg" alt="" />
+                                <img src="{{ asset('images/clients/c-2.svg') }}" alt="Georgia Construction" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="client-item">
-                                <img src="images/clients/c-3.svg" alt="" />
+                                <img src="{{ asset('images/clients/c-3.svg') }}" alt="Georgia Construction" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="client-item">
-                                <img src="images/clients/c-4.svg" alt="" />
+                                <img src="{{ asset('images/clients/c-4.svg') }}" alt="Georgia Construction" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="client-item">
-                                <img src="images/clients/c-5.svg" alt="" />
+                                <img src="{{ asset('images/clients/c-5.svg') }}" alt="Georgia Construction" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#" class="client-item">
-                                <img src="images/clients/c-6.svg" alt="" />
+                                <img src="{{ asset('images/clients/c-6.svg') }}" alt="Georgia Construction" />
                             </a>
                         </div>
                     </div>

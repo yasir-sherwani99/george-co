@@ -5,7 +5,7 @@
 
 <body>
     <!-- Preloader start -->
-    @include('layouts.partials._loader')
+    @include('layouts.inc.loader')
     <!-- Preloader end -->
     <div class="wrapper">
         <div class="header">

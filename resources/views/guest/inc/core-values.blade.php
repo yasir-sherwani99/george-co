@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="services-holder position-relative">
-                    <img class="w-100" src="images/core.png" alt="" />
+                    <img class="w-100" src="{{ asset('images/core.png') }}" alt="Georgia Construction" />
                 </div>
             </div>
             <div class="col-lg-6">

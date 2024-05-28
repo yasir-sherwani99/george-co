@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo-bar-inner d-flex justify-content-between align-items-center">
             <a href="/" class="logo">
-                <img src="{{ Vite::asset('resources/theme/images/logos/logoo.svg') }}" alt="Georgia Construction" />
+                <img src="{{ asset('images/logos/logoo.svg') }}" alt="Georgia Construction" />
             </a>
             <div
                 class="phone-info d-md-flex d-none justify-content-between align-items-center position-relative"
@@ -30,8 +30,8 @@
                         <p class="font-12">Get in touch.</p>
                     </div>
                     <div class="d-flex">
-                        <img class="ms-2" src="images/wp.svg" alt="" />
-                        <img class="ms-2" src="images/call.svg" alt="" />
+                        <img class="ms-2" src="{{ asset('images/wp.svg') }}" alt="Georgia Construction" />
+                        <img class="ms-2" src="{{ asset('images/call.svg') }}" alt="Georgia Construction" />
                     </div>
                 </div>
             </div>

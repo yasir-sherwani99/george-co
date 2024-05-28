@@ -12,7 +12,7 @@
                 to fruition.
             </p>
             <div class="services-holder position-relative d-block d-lg-none text-center">
-                <img src="images/ceo.png" alt="" />
+                <img src="{{ asset('images/ceo.png') }}" alt="Georgia Construction" />
                 <span class="label-box position-absolute font-18 text-white">Bill Conte | CEO</span>
             </div>
             <h2 class="font-36 font-weight-bold mb-3">Our Mission</h2>
@@ -27,7 +27,7 @@
         </div>
         <div class="col-lg-4 d-none d-lg-block">
             <div class="services-holder position-relative">
-                <img src="images/ceo.png" alt="" />
+                <img src="{{ asset('images/ceo.png') }}" alt="Georgia Construction" />
                 <span class="label-box position-absolute font-18 text-white">Bill Conte | CEO</span>
             </div>
         </div>

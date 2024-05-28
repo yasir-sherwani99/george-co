@@ -11,7 +11,7 @@
             <div class="col-lg-4 col-md-6 wow zoomIn">
                 <div class="services-holder position-relative">
                     <div class="img-3">
-                        <img src="images/projects/p-1.png" alt="" />
+                        <img src="{{ asset('images/projects/p-1.png') }}" alt="Georgia Construction" />
                         <div class="prt-hover">
                             <div class="d-table">
                                 <div class="d-tablecell">
@@ -27,7 +27,7 @@
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.4s">
                 <div class="services-holder position-relative">
                     <div class="img-3">
-                        <img src="images/projects/p-2.png" alt="" />
+                        <img src="{{ asset('images/projects/p-2.png') }}" alt="Georgia Construction" />
                         <div class="prt-hover">
                             <div class="d-table">
                                 <div class="d-tablecell">
@@ -43,7 +43,7 @@
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
                 <div class="services-holder position-relative">
                     <div class="img-3">
-                        <img src="images/projects/p-3.png" alt="" />
+                        <img src="{{ asset('images/projects/p-3.png') }}" alt="Georgia Construction" />
                         <div class="prt-hover">
                             <div class="d-table">
                                 <div class="d-tablecell">

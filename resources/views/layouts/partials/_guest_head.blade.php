@@ -10,7 +10,7 @@
     {!! Twitter::generate() !!}
     {!! JsonLd::generate() !!}
     <!-- App Favicon -->
-    <link rel="shortcut icon" href="{{ Vite::asset('resources/theme/images/favicons/Dark.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/favicons/Dark.png') }}">
 
     <!-- App CSS -->
     @vite('resources/css/app.css')

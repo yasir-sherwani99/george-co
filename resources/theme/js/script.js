@@ -5,7 +5,7 @@ import WOW from 'wow.js'
 
 // loader
 $(window).on('load', function() {
-    $('.preloader-wrap').fadeOut(1000);
+    $('.preloader-wrap').fadeOut(500);
 });
 
 $(".label-box").hover(function () {

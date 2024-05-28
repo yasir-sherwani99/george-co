@@ -8,8 +8,8 @@
             indoor air quality, and water conservation.
         </p>
         <div class="d-flex">
-            <img class="me-2" src="../../../images/certifications/certifications-1.svg" alt="" />
-            <img src="images/certifications/certifications-2.svg" alt="" />
+            <img class="me-2" src="{{ asset('images/certifications/certifications-1.svg') }}" alt="Georgia Construction" />
+            <img src="{{ asset('images/certifications/certifications-2.svg') }}" alt="Georgia Construction" />
         </div>
     </div>
 </section>

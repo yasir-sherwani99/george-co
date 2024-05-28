@@ -7,25 +7,25 @@
     </div>
     <ul class="body-contact">
         <li class="mb-4 d-flex">
-            <img src="images/phone.svg" class="me-3" alt="" />
+            <img src="{{ asset('images/phone.svg') }}" class="me-3" alt="Georgia Construction" />
             <span class="text-white">+92 333 4310860</span>
         </li>
         <li class="mb-4 d-flex">
-            <img src="images/email.svg" class="me-3" alt="" />
+            <img src="{{ asset('images/email.svg') }}" class="me-3" alt="Georgia Construction" />
             <span class="text-white">info@georgia.com.pk</span>
         </li>
         <li class="mb-4 d-flex">
-            <img src="images/location.svg" class="me-3" alt="" />
+            <img src="{{ asset('images/location.svg') }}" class="me-3" alt="Georgia Construction" />
             <span class="text-white">37-F Commercial, DHA Phase-I, Lahore.</span>
         </li>
     </ul>
 
     <ul class="footer-contact d-flex">
         <li class="me-3">
-            <a href="#"><img src="images/tw.svg" alt="" /></a>
+            <a href="#"><img src="{{ asset('images/tw.svg') }}" alt="Georgia Construction" /></a>
         </li>
         <li>
-            <a href="#"><img src="images/in.svg" alt="" /></a>
+            <a href="#"><img src="{{ asset('images/in.svg') }}" alt="Georgia Construction" /></a>
         </li>
     </ul>
 </div>
