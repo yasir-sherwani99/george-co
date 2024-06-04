@@ -25,7 +25,7 @@
                     <a class="dropdown-item" href="{{ route('admins.edit', auth()->guard('admin')->user()->id) }}">
                         <i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile
                     </a>
-                    <a class="dropdown-item" href="#"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i> Password</a>
+                    <a class="dropdown-item" href="{{ route('password.create') }}"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i> Password</a>
                     <div class="dropdown-divider mb-0"></div>
                     <a 
                         class="dropdown-item" 

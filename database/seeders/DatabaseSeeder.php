@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ProjectSeeder::class,
             ProjectImageSeeder::class,
             MetaTagSeeder::class,
+            SliderSeeder::class,
         ]);
     }
 }

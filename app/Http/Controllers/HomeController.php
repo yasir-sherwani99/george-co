@@ -9,10 +9,11 @@ use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\TwitterCard;
 use Artesaos\SEOTools\Facades\JsonLd;
 // OR with multi
-use Artesaos\SEOTools\Facades\JsonLdMulti;
+// use Artesaos\SEOTools\Facades\JsonLdMulti;
 
 use App\Models\Service;
 use App\Models\MetaTag;
+use App\Models\Slider;
 
 class HomeController extends Controller
 {
@@ -40,12 +41,14 @@ class HomeController extends Controller
         JsonLd::setType('Company');
         JsonLd::addImage('https://georgia.com.pk/admin-assets/images/logos/logoo.svg');
 
+        // get all sliders
+        $slides = Slider::active()->sort('asc')->get();
         // get all services
         $services = Service::active()->get();
 
         $pagePath = 'home';
         view()->share('pagePath', $pagePath);
 
-        return view('guest.index', compact('services'));
+        return view('guest.index', compact('slides', 'services'));
     }   
 }

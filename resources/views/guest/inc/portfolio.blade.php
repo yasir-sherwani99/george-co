@@ -98,11 +98,40 @@
             >
                 <div class="row">
                     @if(count($projects) > 0)
-                        @foreach($projects as $project)
+                        @foreach($projects as $key => $project)
                             @if($project->categories->slug == $category->slug)
                                 <div class="col-lg-4 col-md-4">
                                     <div class="services-holder position-relative">
-                                        <img src="{{ $project->images[0]->src }}" alt="Georgia Construction" />
+                                        <div id="carouselExampleAutoplaying-{{ $key }}" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <!-- <img src="{{ $project->images[0]->src }}" alt="Georgia Construction" /> -->
+                                                @foreach($project->images as $key => $image)
+                                                    <button 
+                                                        type="button" 
+                                                        data-bs-target="#carouselExampleAutoplaying-{{ $key }}" 
+                                                        data-bs-slide-to="{{ $key }}" 
+                                                        class="{{ $key == 0 ? 'active' : '' }}" 
+                                                        aria-current="{{ $key == 0 ? 'true' : 'false' }}"
+                                                        aria-label="Slide {{ $key + 1 }}">
+                                                    </button>
+                                                @endforeach
+                                            </div>
+                                            <div class="carousel-inner">
+                                                @foreach($project->images as $key => $image)
+                                                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                                        <img src="{{ $image->src }}" class="d-block w-100" alt="Georgia Construction">
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
                                         <div class="img-content-box">
                                             <h5 class="font-24 font-weight-bold">{{ $project->unit }},</h5>
                                             <p class="font-24">{{ $project->town }}, {{ $project->city }}.</p>

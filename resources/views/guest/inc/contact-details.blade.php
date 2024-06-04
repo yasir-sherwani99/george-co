@@ -22,10 +22,14 @@
 
     <ul class="footer-contact d-flex">
         <li class="me-3">
-            <a href="#"><img src="{{ asset('images/tw.svg') }}" alt="Georgia Construction" /></a>
+            <a href="https://www.facebook.com/georgiaconstruction" target="_blank">
+                <img src="{{ asset('images/tw.svg') }}" alt="Georgia Construction" />
+            </a>
         </li>
         <li>
-            <a href="#"><img src="{{ asset('images/in.svg') }}" alt="Georgia Construction" /></a>
+            <a href="https://www.facebook.com/georgiaconstruction" target="_blank">
+                <img src="{{ asset('images/in.svg') }}" alt="Georgia Construction" />
+            </a>
         </li>
     </ul>
 </div>

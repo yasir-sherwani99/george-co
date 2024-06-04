@@ -175,6 +175,14 @@ class AdminController extends Controller
     		abort(404);
     	}
 
+        // delete image from folder if exist
+        if(isset($admin->photo)) {
+            if (File::exists(public_path($admin->photo))) {
+                // delete image from storage
+                File::delete($admin->photo);
+            }
+        }
+
         $admin->delete();               
 
         return redirect()->route('admins.index')

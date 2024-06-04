@@ -4,10 +4,7 @@
         <div class="row gx-3">
             @if(count($services) > 0)
                 @foreach($services as $key => $service)
-                    <?php 
-                        $increment = ($key * 2 + 1)/10 . 's';
-                    ?>
-                    <div class="col-lg-4 col-md-6 col-6 wow bounceInUp" data-wow-delay="{{ $key != 0 ? $increment : '0.0s' }}">
+                    <div class="col-lg-4 col-md-6 col-6 wow zoomIn">
                         <div class="services-holder position-relative">
                             <img src="{{ $service->images[0]->src }}" alt="Georgia Construction" />
                             <span class="label-box position-absolute font-18 text-white">{{ $service->title }}</span>

@@ -9,8 +9,13 @@
                         <div class="card">
                             <div class="card-body p-0 auth-header-box">
                                 <div class="text-center p-3">
-                                    <a href="#" class="logo logo-admin">
-                                        <img src="{{ asset('admin-assets/images/logos/logoo.svg') }}" height="50" alt="logo" class="auth-logo">
+                                    <a href="{{ url('/') }}" class="logo logo-admin">
+                                        <img 
+                                            src="{{ asset('admin-assets/images/logos/logoo.svg') }}" 
+                                            height="50" 
+                                            alt="Georgia Construction" 
+                                            class="auth-logo"
+                                        />
                                     </a>
                                     <h4 class="mt-3 mb-1 fw-semibold text-white font-18">Let's Get Started</h4>   
                                     <p class="text-muted  mb-0">Sign in to continue to Admin Panel.</p>  

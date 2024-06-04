@@ -12,17 +12,17 @@
                     <div class="addres-footer text-white mb-4">
                         <h5 class="font-16 font-weight-bold">Address</h5>
                         <p class="font-14 font-weight-light">
-                            1110 Al-Hafeez Heights, Gulberg III, Lahore.
+                            37-F Commercial DHA Phase-1, Lahore.
                         </p>
                     </div>
                     <div class="addres-footer text-white mb-4">
                         <h5 class="font-16 font-weight-bold">Email</h5>
-                        <p class="font-14 font-weight-light">37-F Commercial DHA Phase-1, Lahore</p>
+                        <p class="font-14 font-weight-light">info@georgia.com.pk</p>
                     </div>
                     <div class="addres-footer text-white">
                         <h5 class="font-16 font-weight-bold">Call Us</h5>
-                        <p class="font-14 font-weight-light">+92 335 3222 777</p>
-                        <p class="font-14 font-weight-light">+92 42 356 94332</p>
+                        <p class="font-14 font-weight-light">+92 333 4310860</p>
+                        <p class="font-14 font-weight-light">+92 300 4310868</p>
                     </div>
                 </div>
             </div>

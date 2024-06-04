@@ -8,5 +8,7 @@
 @import url('../theme/fontawesome/css/all.min.css');
 /* Import Animate CSS */
 @import url('../theme/css/animate.css');
-/* Importing Custom Style CSS */
+/* Importing Style CSS */
 @import url('../theme/css/style.css');
+/* Importing Custom Style CSS */
+@import url('../theme/css/custom.css');

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,7 @@ Route::get('about', [App\Http\Controllers\PageController::class, 'aboutIndex'])-
 Route::get('projects', [App\Http\Controllers\PageController::class, 'projectsIndex'])->name('projects');
 Route::get('services', [App\Http\Controllers\PageController::class, 'servicesIndex'])->name('services');
 Route::get('contact-us', [App\Http\Controllers\PageController::class, 'contactIndex'])->name('contact');
+Route::post('contact-us', [App\Http\Controllers\PageController::class, 'contactStore'])->name('contact.store');
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +48,7 @@ Route::group([
     Route::middleware('auth-admin')->group(function() {
         Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'getDashboard'])->name('admin.dashboard');
         Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
+        Route::resource('sliders', App\Http\Controllers\Admin\SliderController::class);
         Route::get('projects', [App\Http\Controllers\Admin\ProjectController::class, 'index'])->name('projects.index');
         Route::get('projects/create', [App\Http\Controllers\Admin\ProjectController::class, 'create'])->name('projects.create');
         Route::post('projects', [App\Http\Controllers\Admin\ProjectController::class, 'store'])->name('projects.store');
@@ -57,6 +60,10 @@ Route::group([
         Route::get('metatags/{metatag}/edit', [App\Http\Controllers\Admin\MetaTagController::class, 'edit'])->name('metatags.edit');
         Route::put('metatags/{metatag}', [App\Http\Controllers\Admin\MetaTagController::class, 'update'])->name('metatags.update');
         Route::resource('admins', App\Http\Controllers\Admin\AdminController::class);
+        Route::get('inbox', [App\Http\Controllers\Admin\InboxController::class, 'index'])->name('inbox.index');
+        Route::get('inbox/{inbox}/details', [App\Http\Controllers\Admin\InboxController::class, 'show'])->name('inbox.show');
+        Route::get('password', [App\Http\Controllers\Admin\SettingsController::class, 'createPassword'])->name('password.create');
+        Route::post('password', [App\Http\Controllers\Admin\SettingsController::class, 'changePassword'])->name('password.change');
     });
 });
 

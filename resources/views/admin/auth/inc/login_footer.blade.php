@@ -1,5 +1,5 @@
 <div class="m-3 text-center text-muted">
-    <p class="mb-0">Project By</p>
+    <p class="mb-0">Developed By</p>
     <p class="mb-0">
         <a 
             href="https://skyitservices.com/" 

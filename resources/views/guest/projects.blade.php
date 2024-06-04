@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <!-- Banner section -->
-    @include('guest.inc.banner', ['banner' => 'banner-4.png'])
+    <!-- Slider section -->
+    @include('guest.inc.slider', ['slides' => $slides])
 
     <section class="content-sec">
         <div class="container">
